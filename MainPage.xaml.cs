@@ -1,4 +1,4 @@
-using Microsoft.Maui.Controls;
+using Xamarin.Forms;
 using System;
 using System.Linq;
 using System.Collections.Generic;
@@ -37,19 +37,5 @@ namespace UserFormApp
             var displayPage = new DisplayPage(userData);
             await Navigation.PushAsync(displayPage);
         }
-    }
-
-    public class UserData
-    {
-        public string Name { get; set; }
-        public DateTime Birthdate { get; set; }
-        public string Occupation { get; set; }
-        public string Contact { get; set; }
-        public string Nationality { get; set; }
-        public string EnglishLevel { get; set; }
-        public List<string> ProgrammingLanguages { get; set; }
-        public string Aptitudes { get; set; }
-        public List<string> Skills { get; set; }
-        public string Profile { get; set; }
     }
 }

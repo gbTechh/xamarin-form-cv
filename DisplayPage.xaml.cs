@@ -1,4 +1,4 @@
-using Microsoft.Maui.Controls;
+using Xamarin.Forms;
 
 namespace UserFormApp
 {
@@ -7,8 +7,9 @@ namespace UserFormApp
         public DisplayPage(UserData userData)
         {
             InitializeComponent();
-            NameLabel.Text = $"Nombre y Apellidos: {userData.Name}";
-            BirthdateLabel.Text = $"Fecha de Nacimiento: {userData.Birthdate.ToString("d")}";
+
+            NameLabel.Text = $"Nombre: {userData.Name}";
+            BirthdateLabel.Text = $"Fecha de Nacimiento: {userData.Birthdate.ToShortDateString()}";
             OccupationLabel.Text = $"Ocupación: {userData.Occupation}";
             ContactLabel.Text = $"Contacto: {userData.Contact}";
             NationalityLabel.Text = $"Nacionalidad: {userData.Nationality}";
