@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UserFormApp.MainPage"
+             Title="Formulario de Usuario">
+
+    <ScrollView>
+        <StackLayout Padding="20">
+            <Entry x:Name="NameEntry" Placeholder="Nombre y Apellidos" />
+            <DatePicker x:Name="BirthdatePicker" />
+            <Entry x:Name="OccupationEntry" Placeholder="Ocupación" />
+            <Entry x:Name="ContactEntry" Placeholder="Contacto (telefono, email)" />
+
+            <Picker x:Name="NationalityPicker" Title="Nacionalidad">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Argentina</x:String>
+                        <x:String>Brasil</x:String>
+                        <x:String>Chile</x:String>
+                        <x:String>Colombia</x:String>
+                        <x:String>Perú</x:String>
+                        <x:String>Uruguay</x:String>
+                        <x:String>Venezuela</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Nivel de inglés" />
+            <StackLayout Orientation="Horizontal">
+                <RadioButton Content="Básico" GroupName="EnglishLevel" />
+                <RadioButton Content="Intermedio" GroupName="EnglishLevel" />
+                <RadioButton Content="Avanzado" GroupName="EnglishLevel" />
+                <RadioButton Content="Fluido" GroupName="EnglishLevel" />
+            </StackLayout>
+
+            <Picker x:Name="ProgrammingLanguagesPicker" Title="Lenguajes de programación" IsMultiple="True">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>C#</x:String>
+                        <x:String>Java</x:String>
+                        <x:String>Python</x:String>
+                        <x:String>JavaScript</x:String>
+                        <x:String>C++</x:String>
+                        <x:String>PHP</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Entry x:Name="AptitudesEntry" Placeholder="Aptitudes" />
+
+            <Label Text="Habilidades" />
+            <CheckBox x:Name="TeamworkCheckbox" Content="Trabajo en equipo" />
+            <CheckBox x:Name="CommunicationCheckbox" Content="Comunicación" />
+            <CheckBox x:Name="LeadershipCheckbox" Content="Liderazgo" />
+            <CheckBox x:Name="ProblemSolvingCheckbox" Content="Resolución de problemas" />
+
+            <Editor x:Name="ProfileEditor" Placeholder="Perfil" HeightRequest="100" />
+
+            <Button Text="Enviar" Clicked="OnSubmitClicked" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
